@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+:root {
+    --line-border-empty: #E0E0E0;
+    --line-border-fill: #3498DB;
+    --number--a: #000000;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 36vw;
+    max-width: 300px;
+    vertical-align: baseline;
+    margin-bottom: 18px;
+}
+
+.progress-container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: var(--line-border-empty);
+    top: 40%;
+    left: 0;
+    z-index: -2;
+}
+
+.progress {
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    background-color: var(--line-border-fill);
+    top: 40%;
+    left: 0;
+    z-index: -1;
+    transition: 0.4s;
+}
+
+.circle {
+    background-color: #FFFFFF;
+    width: 30px;
+    height: 30px;
+    border: 3px solid var(--line-border-empty);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--line-border-empty);
+}
+
+.circle.active {
+    color: var(--number--active);
+    border: 3px solid var(--line-border-fill);
+    transition: border-color 0.7s ease-in-out, color 0.7s ease;
+}
+
+.btn {
+    font-family: inherit;
+    font-size: 12px; 
+    background-color: var(--line-border-fill);
+    border: 0;
+    border-radius: 14px;
+    padding: 6px 24px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.btn:active {
+    transform: scale(0.91);
+    transition: transform 0.4s ease-in;
+}
+
+.btn:disabled {
+    background-color: var(--line-border-empty);
+    cursor: not-allowed;
+}
+
+.btn:focus {
+    outline: 0;
+}

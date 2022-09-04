@@ -5,3 +5,6 @@
 
 ### [Progress Steps](./projects/02-progress-steps/)
 <img src="./gifs/progress-steps.gif" alt="gif"/>
+
+### [Rotating Navigation](./projects/03-rotating-navigation//)
+<img src="./gifs/rotating-navigation.gif" alt="gif"/>

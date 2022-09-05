@@ -8,3 +8,6 @@
 
 ### [Rotating Navigation](./projects/03-rotating-navigation//)
 <img src="./gifs/rotating-navigation.gif" alt="gif"/>
+
+### [Hidden Search Widget](./projects/04-hidden-search-widget/)
+<img src="./gifs/hidden-search-widget.gif" alt="gif"/>

@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --border-radius: 20px;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-color: #D8B4E2; */
+    background-image: linear-gradient(180deg, #e8ceef, #150a23);
+}
+
+.search {
+    height: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search .input {
+    height: 50px;
+    width: 10px;
+    padding: 16px;
+    font-size: 18px;
+    border: none;
+    transition: 0.5s ease-in-out;
+    /* , 0.4s ease; */
+    color: #aa66b7;
+}
+
+.search .input::placeholder {
+    color: #c19ac9;
+}
+
+.search .btn {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.52s ease-in-out;
+    /* transition: 0.5s cubic-bezier(0.5, 0.05, 0.1, 1); */
+    cursor: pointer;
+}
+
+.search .btn:hover {
+    background-color: rgb(243, 239, 239);
+}
+
+.search .btn:active {
+    transform: scale(1.2);
+}
+
+.btn:focus,
+input:focus {
+    outline: none;
+}
+
+.search.active .btn{
+    transform: translateX(190px);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.search.active input{
+    width: 200px;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+}

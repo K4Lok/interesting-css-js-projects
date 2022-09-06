@@ -11,3 +11,6 @@
 
 ### [Hidden Search Widget](./projects/04-hidden-search-widget/)
 <img src="./gifs/hidden-search-widget.gif" alt="gif"/>
+
+### [Blurry Loading](./projects/05-blurry-loading/)
+<img src="./gifs/blurry-loading.gif" alt="gif"/>

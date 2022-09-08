@@ -14,3 +14,6 @@
 
 ### [Blurry Loading](./projects/05-blurry-loading/)
 <img src="./gifs/blurry-loading.gif" alt="gif"/>
+
+### [Scroll Animation](./projects/06-scroll-animation/)
+<img src="./gifs/scroll-animation.gif" alt="gif"/>

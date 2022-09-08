@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --transition-speed: 700ms;
+    --left-overlay: rgba(24, 67, 67, 0.4);
+    --right-overlay: rgba(44, 65, 80, 0.4);
+    --left-hover: rgba(144, 206, 247, 1);
+    --right-hover: rgba(87, 119, 175, 1);
+    --hover-other: rgba(226, 226, 226, 0.8);
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container.hover-left .split.left{
+    width: 65vw;
+}
+.container.hover-left .split.right{
+    width: 35vw;
+}
+
+.container.hover-right .split.right{
+    width: 65vw;
+}
+.container.hover-right .split.left{
+    width: 35vw;
+}
+
+
+.container .split {
+    position: absolute;
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .split.left {
+    left: 0;
+    background: url("https://images.unsplash.com/photo-1655056804527-4fc99ad6b011?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container .split.left::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--left-overlay);
+    pointer-events: none;
+}
+
+.container .split.right {
+    right: 0;
+    background: url("https://images.unsplash.com/photo-1535224206242-487f7090b5bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container .split.right::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--right-overlay);
+    pointer-events: none;
+}
+
+.split, .split.left::before, .split.right::before {
+    transition: all var(--transition-speed) ease-in-out;
+}
+
+h1 {
+    white-space: nowrap;
+}
+
+.split h1,
+.split button {
+    transform: translateY(-10vh);
+}
+
+.split h1 {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0px 2px 2px #000;
+}
+
+.btn {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 16px 32px;
+    cursor: pointer;
+}
+
+.left .btn:hover {
+    color: black;
+    background-color: var(--left-hover);
+    border-color: var(--left-hover);
+}
+
+.right .btn:hover {
+    background-color: var(--right-hover);
+    border-color: var(--right-hover);
+}
+
+.container.hover-left .split.right h1 {
+    color: var(--hover-other);
+}
+.container.hover-left .split.right button {
+    color: var(--hover-other);
+    border-color: var(--hover-other);
+}
+
+.container.hover-right .split.left h1 {
+    color: var(--hover-other);
+}
+.container.hover-right .split.left button {
+    color: var(--hover-other);
+    border-color: var(--hover-other);
+}
+
+@media (max-width: 800px) {
+    .split h1 {
+        font-size: 2rem;
+    }
+    .btn {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+}

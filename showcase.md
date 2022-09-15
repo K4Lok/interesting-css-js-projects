@@ -17,3 +17,6 @@
 
 ### [Scroll Animation](./projects/06-scroll-animation/)
 <img src="./gifs/scroll-animation.gif" alt="gif"/>
+
+### [Split Landing Page](./projects/07-split-landing-page/)
+<img src="./gifs/split-landing-page.gif" alt="gif"/>

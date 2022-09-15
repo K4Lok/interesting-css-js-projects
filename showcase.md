@@ -20,3 +20,6 @@
 
 ### [Split Landing Page](./projects/07-split-landing-page/)
 <img src="./gifs/split-landing-page.gif" alt="gif"/>
+
+### [Form Input Wave](./projects/08-form-input-wave/)
+<img src="./gifs/form-input-wave.gif" alt="gif"/>

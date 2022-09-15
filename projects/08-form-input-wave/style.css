@@ -6,7 +6,7 @@
 
 body {
     color: white;
-    font-family: 'Muli';
+    font-family: 'Muli', sans-serif;
     background-color: cadetblue;
     margin: 0;
     height: 100vh;
